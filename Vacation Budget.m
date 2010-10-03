@@ -1,22 +1,28 @@
 #import <Foundation/Foundation.h>
 
+struct budget {
+	float exchangeRate;
+	double budget;
+	double euroCharge;
+};
+
 int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
 	//Variables
-	float exchangeRate = 1.2500;
-	double budget = 1000.00;
-	double euroCharge;
+	struct budget vacationBudget;
 	
-	NSLog(@"Starting budget is $%.2f", budget);
+	vacationBudget.budget = 1000.00;
+	vacationBudget.exchangeRate = 1.2500;
+	NSLog(@"Starting budget is $%.2f", vacationBudget.budget);
 	
-	budget = budget - 100;
-	NSLog(@"Spending $100 leaves $%.2f in the budget", budget);
+	vacationBudget.budget = vacationBudget.budget - 100;
+	NSLog(@"Spending $100 leaves $%.2f in the budget", vacationBudget.budget);
 	
-	euroCharge = 100 * exchangeRate;
-	budget = budget - euroCharge;
-	NSLog(@"100 Euros is equal to $%.2f", euroCharge);
-	NSLog(@"Charging 100 Euros leaves $%.2f in the budget", budget);
+	vacationBudget.euroCharge = 100 * vacationBudget.exchangeRate;
+	vacationBudget.budget = vacationBudget.budget - vacationBudget.euroCharge;
+	NSLog(@"100 Euros is equal to $%.2f", vacationBudget.euroCharge);
+	NSLog(@"Charging 100 Euros leaves $%.2f in the budget", vacationBudget.budget);
 	
     [pool drain];
     return 0;
