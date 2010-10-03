@@ -6,18 +6,10 @@ typedef struct {
 	double euroCharge;
 } budget;
 
+// Declariations
 budget vacationBudget;
-
-//spendDollars function
-void spendDollars (double dollars) {
-	vacationBudget.budget = vacationBudget.budget - dollars;
-}
-
-//chargeEuro function
-void chargeEuros (double euros) {
-	vacationBudget.euroCharge = euros * vacationBudget.exchangeRate;
-	vacationBudget.budget = vacationBudget.budget - vacationBudget.euroCharge;
-}
+void spendDollars (double dollars);
+void chargeEuros (double euros);
 
 int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -39,3 +31,17 @@ int main (int argc, const char * argv[]) {
     [pool drain];
     return 0;
 }
+
+//Functions implementations
+
+//spendDollars function
+void spendDollars (double dollars) {
+	vacationBudget.budget = vacationBudget.budget - dollars;
+}
+
+//chargeEuro function
+void chargeEuros (double euros) {
+	vacationBudget.euroCharge = euros * vacationBudget.exchangeRate;
+	vacationBudget.budget = vacationBudget.budget - vacationBudget.euroCharge;
+}
+
