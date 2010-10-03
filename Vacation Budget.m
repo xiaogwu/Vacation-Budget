@@ -1,47 +1,101 @@
 #import <Foundation/Foundation.h>
-
+/*
 typedef struct {
 	float exchangeRate;
 	double budget;
-	double euroCharge;
+	double foreignCurrencyCharge;
 } budget;
+*/
 
-// Declariations
-budget vacationBudget;
-void spendDollars (double dollars);
-void chargeEuros (double euros);
+@interface Budget : NSObject {
+	float exchangeRate;
+	double budget;
+	double foreignCurrencyCharge;
+}
+
+- (void) createBudget: (double) aBudget withExchangeRate: (float) anExchangeRate;
+- (void) spendDollars: (double) dollars;
+- (void) chargeForeignCurrency: (double) foreignCurrency;
+
+@end
+
+@implementation Budget
+
+- (void) createBudget: (double) aBudget withExchangeRate: (float) anExchangeRate {
+	exchangeRate = anExchangeRate;
+	budget = aBudget;
+	NSLog(@"Starting budget is $%.2f", budget);
+}
+- (void) spendDollars: (double) dollars {
+	budget = budget - dollars;
+	NSLog(@"Spending $%.2f leaves $%.2f in the budget", dollars, budget);
+}
+- (void) chargeForeignCurrency: (double) foreignCurrency {
+	foreignCurrencyCharge = foreignCurrency * exchangeRate;
+	budget = budget - foreignCurrencyCharge;
+	NSLog(@"%.2f foreignCurrency is equal to $%.2f", foreignCurrency, foreignCurrencyCharge);
+	NSLog(@"Charging %.2f foreignCurrency leaves $%.2f in the budget", foreignCurrency, budget);
+}
+
+@end
+
+
+/*
+// Varible Declariations
+budget vacationBudgetEurope;
+budget vacationBudgetEngland;
+
+// Function Declariations
+void spendDollars (budget *theBudget, double dollars);
+void chargeForeignCurrency (budget *theBudget, double foreignCurrency);
+*/
 
 int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
-	//Variables
-	vacationBudget.budget = 1000.00;
-	vacationBudget.exchangeRate = 1.2500;
+	// Local Variables
+	// Spend amounts
 	double numberDollars = 100;
 	double numberEuros = 100;
-	NSLog(@"Starting budget is $%.2f", vacationBudget.budget);
+	double numberPounds = 100;
 	
-	spendDollars(numberDollars);
-	NSLog(@"Spending $100 leaves $%.2f in the budget", vacationBudget.budget);
+	// Europe Vacation Budget
+	//Instantiate new Europe Vacation Budget Object
+	Budget *europeBudget = [Budget new];
+	NSLog(@"Creating Europe Budget");
 	
-	chargeEuros(numberEuros);
-	NSLog(@"100 Euros is equal to $%.2f", vacationBudget.euroCharge);
-	NSLog(@"Charging 100 Euros leaves $%.2f in the budget", vacationBudget.budget);
+	//Send messages to Europe Vacation Budget Object
+	[europeBudget createBudget: 1000.00 withExchangeRate: 1.2500];
+	[europeBudget spendDollars: numberDollars];
+	[europeBudget chargeForeignCurrency: numberEuros];
+	
+	// England Vacation Budget
+	//Instantiate new Englad Vacation Budget Object
+	Budget *englandBudget = [Budget new];
+	NSLog(@"Creating England Budget");
+	
+	//Send messages to Englad Vacation Budget Object
+	[englandBudget createBudget: 2000.00 withExchangeRate: 1.5000];
+	[englandBudget spendDollars: numberDollars];
+	[englandBudget chargeForeignCurrency: numberPounds];
 	
     [pool drain];
     return 0;
 }
 
+/*
 //Functions implementations
 
 //spendDollars function
-void spendDollars (double dollars) {
-	vacationBudget.budget = vacationBudget.budget - dollars;
+void spendDollars (budget *theBudget, double dollars) {
+	theBudget->budget = theBudget->budget - dollars;
 }
 
 //chargeEuro function
-void chargeEuros (double euros) {
-	vacationBudget.euroCharge = euros * vacationBudget.exchangeRate;
-	vacationBudget.budget = vacationBudget.budget - vacationBudget.euroCharge;
+void chargeForeignCurrency (budget *theBudget, double foreignCurrency) {
+	theBudget->foreignCurrencyCharge = foreignCurrency * theBudget->exchangeRate;
+	theBudget->budget = theBudget->budget - theBudget->foreignCurrencyCharge;
 }
+ */
+
 
