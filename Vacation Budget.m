@@ -1,16 +1,16 @@
 #import <Foundation/Foundation.h>
 
-struct budget {
+typedef struct {
 	float exchangeRate;
 	double budget;
 	double euroCharge;
-};
+} budget;
 
 int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
 	//Variables
-	struct budget vacationBudget;
+	budget vacationBudget;
 	
 	vacationBudget.budget = 1000.00;
 	vacationBudget.exchangeRate = 1.2500;
