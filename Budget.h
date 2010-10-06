@@ -15,7 +15,7 @@
 }
 
 - (void) createBudget: (double) aBudget withExchangeRate: (float) anExchangeRate;
-- (void) spendDollars: (double) dollars;
+- (void) spendDollars: (NSNumber*) dollars;
 - (void) chargeForeignCurrency: (double) foreignCurrency;
 
 @end
