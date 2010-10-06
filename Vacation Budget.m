@@ -1,4 +1,6 @@
 #import <Foundation/Foundation.h>
+#import "Budget.h"
+
 /*
 typedef struct {
 	float exchangeRate;
@@ -6,39 +8,6 @@ typedef struct {
 	double foreignCurrencyCharge;
 } budget;
 */
-
-@interface Budget : NSObject {
-	float exchangeRate;
-	double budget;
-	double foreignCurrencyCharge;
-}
-
-- (void) createBudget: (double) aBudget withExchangeRate: (float) anExchangeRate;
-- (void) spendDollars: (double) dollars;
-- (void) chargeForeignCurrency: (double) foreignCurrency;
-
-@end
-
-@implementation Budget
-
-- (void) createBudget: (double) aBudget withExchangeRate: (float) anExchangeRate {
-	exchangeRate = anExchangeRate;
-	budget = aBudget;
-	NSLog(@"Starting budget is $%.2f", budget);
-}
-- (void) spendDollars: (double) dollars {
-	budget = budget - dollars;
-	NSLog(@"Spending $%.2f leaves $%.2f in the budget", dollars, budget);
-}
-- (void) chargeForeignCurrency: (double) foreignCurrency {
-	foreignCurrencyCharge = foreignCurrency * exchangeRate;
-	budget = budget - foreignCurrencyCharge;
-	NSLog(@"%.2f foreignCurrency is equal to $%.2f", foreignCurrency, foreignCurrencyCharge);
-	NSLog(@"Charging %.2f foreignCurrency leaves $%.2f in the budget", foreignCurrency, budget);
-}
-
-@end
-
 
 /*
 // Varible Declariations

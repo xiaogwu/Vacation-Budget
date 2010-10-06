@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58DFC725125CC37D00B49885 /* Budget.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DFC724125CC37D00B49885 /* Budget.m */; };
 		8DD76F9A0486AA7600D96B5E /* Vacation Budget.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Vacation Budget.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* Vacation Budget.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* Vacation Budget.1 */; };
@@ -29,6 +30,8 @@
 		08FB7796FE84155DC02AAC07 /* Vacation Budget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Vacation Budget.m"; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* Vacation Budget_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vacation Budget_Prefix.pch"; sourceTree = "<group>"; };
+		58DFC723125CC37D00B49885 /* Budget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Budget.h; sourceTree = "<group>"; };
+		58DFC724125CC37D00B49885 /* Budget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Budget.m; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* Vacation Budget */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Vacation Budget"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859EA3029092ED04C91782 /* Vacation Budget.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "Vacation Budget.1"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +51,7 @@
 		08FB7794FE84155DC02AAC07 /* Vacation Budget */ = {
 			isa = PBXGroup;
 			children = (
+				58DFC722125CC29D00B49885 /* Classes */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6859EA2029092E104C91782 /* Documentation */,
 				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
@@ -79,6 +83,15 @@
 				8DD76FA10486AA7600D96B5E /* Vacation Budget */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		58DFC722125CC29D00B49885 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				58DFC723125CC37D00B49885 /* Budget.h */,
+				58DFC724125CC37D00B49885 /* Budget.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		C6859EA2029092E104C91782 /* Documentation */ = {
@@ -117,7 +130,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "Vacation Budget" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* Vacation Budget */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76F9A0486AA7600D96B5E /* Vacation Budget.m in Sources */,
+				58DFC725125CC37D00B49885 /* Budget.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
