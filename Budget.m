@@ -16,9 +16,9 @@
 	budget = aBudget;
 	NSLog(@"Starting budget is $%.2f", budget);
 }
-- (void) spendDollars: (NSNumber*) dollars {
-	budget = budget - [dollars doubleValue];
-	NSLog(@"Spending $%.2f leaves $%.2f in the budget", [dollars doubleValue], budget);
+- (void) spendDollars: (double) dollars {
+	budget = budget - dollars;
+	NSLog(@"Spending $%.2f leaves $%.2f in the budget", dollars, budget);
 }
 - (void) chargeForeignCurrency: (double) foreignCurrency {
 	foreignCurrencyCharge = foreignCurrency * exchangeRate;

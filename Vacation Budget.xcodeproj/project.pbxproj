@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58DFC725125CC37D00B49885 /* Budget.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DFC724125CC37D00B49885 /* Budget.m */; };
+		58DFC7B8125D192A00B49885 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DFC7B7125D192A00B49885 /* Transaction.m */; };
 		8DD76F9A0486AA7600D96B5E /* Vacation Budget.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Vacation Budget.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* Vacation Budget.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* Vacation Budget.1 */; };
@@ -32,6 +33,8 @@
 		32A70AAB03705E1F00C91783 /* Vacation Budget_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vacation Budget_Prefix.pch"; sourceTree = "<group>"; };
 		58DFC723125CC37D00B49885 /* Budget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Budget.h; sourceTree = "<group>"; };
 		58DFC724125CC37D00B49885 /* Budget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Budget.m; sourceTree = "<group>"; };
+		58DFC7B6125D192A00B49885 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		58DFC7B7125D192A00B49885 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* Vacation Budget */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Vacation Budget"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859EA3029092ED04C91782 /* Vacation Budget.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "Vacation Budget.1"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +93,8 @@
 			children = (
 				58DFC723125CC37D00B49885 /* Budget.h */,
 				58DFC724125CC37D00B49885 /* Budget.m */,
+				58DFC7B6125D192A00B49885 /* Transaction.h */,
+				58DFC7B7125D192A00B49885 /* Transaction.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			files = (
 				8DD76F9A0486AA7600D96B5E /* Vacation Budget.m in Sources */,
 				58DFC725125CC37D00B49885 /* Budget.m in Sources */,
+				58DFC7B8125D192A00B49885 /* Transaction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
